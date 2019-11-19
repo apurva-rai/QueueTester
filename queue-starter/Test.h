@@ -36,13 +36,13 @@ class Test
   /**
   *	@post Outputs the test results of Queue method Queue()
   */
-  void constructorChecker();
+  //void constructorChecker();
 
   /**
   *	@post Outputs the test results of Queue method ~Queue()
   */
-  void destructorChecker();
-  
+  //void destructorChecker();
+
   /**
   *	@post Calls all the test methods
   */

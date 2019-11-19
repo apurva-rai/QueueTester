@@ -1,0 +1,10 @@
+Apurva Rai
+EECS 448 Lab 6
+
+Bugs:
+
+1. When multiple values are enqueued the first value is replaced by the 2nd value that is enqueued.
+This could be a bug in the enqueue function but could also be a bug in the peek function which selectively checks whether there are one or more values in the queue.
+Such an implementation of peek would be tedious given the way the Queue class is defined so I am inclined to believe it is the former.
+
+2. The destructor does not work properly. This can be seen in memory leaks when the program is run using Valgrind.
