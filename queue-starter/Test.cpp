@@ -13,11 +13,11 @@ void Test::isEmptyChecker()
 
 Queue q;
 
-cout << "\nTest 1: Queue empty before any operations performed- " << (q.isEmpty()?"PASSED":"FAILED");
+cout << "\nTest 1: Queue empty before any operations performed: " << (q.isEmpty()?"PASSED":"FAILED");
 
 q.enqueue(42);
 
-cout << "\nTest 2: Queue non-empty after enqueue is performed- " << (q.isEmpty()?"FAILED":"PASSED");
+cout << "\nTest 2: Queue non-empty after enqueue is performed: " << (q.isEmpty()?"FAILED":"PASSED");
 
 }
 
@@ -27,7 +27,7 @@ void Test::enqueueChecker()
 Queue q;
 q.enqueue(42);
 
-cout << "\nTest 3: Enqueue one value and peek- " << ((q.peekFront() == 42)?"PASSED":"FAILED");
+cout << "\nTest 3: Enqueue one value and peek returns the same value: " << ((q.peekFront() == 42)?"PASSED":"FAILED");
 
 Queue p;
 
@@ -38,7 +38,7 @@ Queue p;
 
   }
 
-cout << "\nTest 4: Enqueue multiple values and peek- " << ((p.peekFront() == 10)?"PASSED":"FAILED");
+cout << "\nTest 4: Enqueue multiple values and peek for the first enqueued value: " << ((p.peekFront() == 10)?"PASSED":"FAILED");
 
 }
 
@@ -51,20 +51,27 @@ Queue q;
   try{
 
   q.dequeue();
-  cout << "\nTest 5: Dequeue on empty stack(Should throw an error)- " << "FAILED";
+  cout << "\nTest 5: Dequeue on empty stack(Should throw an error): " << "FAILED";
 
   }
   catch(...)
   {
 
-  cout << "\nTest 5: Dequeue on empty stack(Should throw an error)- " << "PASSED";
+  cout << "\nTest 5: Dequeue on empty stack(Should throw an error): " << "PASSED";
 
   }
 
 q.enqueue(42);
 q.dequeue();
 
-cout << "\nTest 6: Dequeueing after enqueueing once(Stack should be  empty)- " << (q.isEmpty()?"PASSED":"FAILED");
+cout << "\nTest 6: Dequeueing after enqueueing once(Stack should be  empty): " << (q.isEmpty()?"PASSED":"FAILED");
+
+Queue p;
+
+p.enqueue(42);
+p.enqueue(69);
+
+cout << "\nTest 7: Dequeueing once after enqueueing twice(Stack should be  non-empty): " << (q.isEmpty()?"FAILED":"PASSED");
 
 }
 
@@ -80,14 +87,14 @@ Queue q;
 
   }
 
-cout << "\nTest 7: Peeking the front after enqueueing multiple values- " << ((q.peekFront() == 10)?"PASSED":"FAILED");
+cout << "\nTest 8: Peeking the front after enqueueing multiple values: " << ((q.peekFront() == 10)?"PASSED":"FAILED");
 
 Queue p;
 
 p.enqueue(42);
 p.enqueue(50);
 
-cout << "\nTest 8: Peeking the front after enqueueing multiple objects and comparing it to object that was enqueued 2nd- " << ((p.peekFront() == 50)?"PASSED\n\n":"FAILED\n\n");
+cout << "\nTest 9: Peeking the front after enqueueing multiple objects and comparing it to object that was enqueued 2nd: " << ((p.peekFront() == 50)?"PASSED\n\n":"FAILED\n\n");
 
 }
 
